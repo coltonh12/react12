@@ -4,7 +4,7 @@ import './App.css';
 const book = {
   title: 'harry potter and the chamber of secrets',
   author: 'J.k Rowling',
-  published: '2007',
+  published: '2008',
   image: 'https://upload.wikimedia.org/wikipedia/en/5/5c/Harry_Potter_and_the_Chamber_of_Secrets.jpg',
   width: '264',
   height: '378'
