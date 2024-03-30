@@ -1,6 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
 
+const magazines = [
+{id: 1, title: 'readers digest', theme: 'news and culture', isAvaliable: true},
+{id: 2, title: 'The daily bugle', theme: 'daily news', isAvaliable: true},
+{id: 3, title: 'The daily prophet', theme: 'Wizard news', isAvaliable: false },
+];
+
+function ZineRack() {
+const listZines = magazines.map(zine =>
+  <li
+  keys={zine.id}
+  style={{
+    color: zine.isAvaliable ? 'red' : 'green'
+  }}
+  >
+    {zine.title}
+  </li>
+);
+return (
+  <ul>{listZines}</ul>
+)
+}
+
 const book = {
   title: 'harry potter and the chamber of secrets',
   author: 'J.k Rowling',
@@ -9,6 +31,7 @@ const book = {
   width: '264',
   height: '378'
 };
+
 
 function Bookshelf() {
   return (
@@ -42,7 +65,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        
+        <ZineRack />
         <Bookshelf />
       </header>
     </div>
